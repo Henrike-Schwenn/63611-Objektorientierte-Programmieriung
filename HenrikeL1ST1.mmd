@@ -1,0 +1,31 @@
+classDiagram
+    class Kühlschrank {
+        + Attribute
+        + Komponenten regelmäßig auf Funktionstüchtigkeit prüfen()
+        + Bei Defekten Nachricht an Reparaturdienst schicken()
+        + Bei Defekten Besitzer informieren()
+        + Ständig prüfen, welche Nahrungsmittel vorhanden sind()
+        + Wenn Nahrungsmittel zur Neige geht, Nachricht an Nahrungsmittelgeschäft senden()
+        + Nachricht des Hausroboters annehmen()
+    }
+    class Reparaturdienst {
+        + Reparaturauftrag annehmen()
+        + Kühlschrank reparieren()
+    }
+    class Hausroboter{
+        + Nahrungsmittellieferung annehmen()
+        + Nachricht an den Kühlschrank senden, wenn Nahrungsmittel angekommen ist()
+    }
+    class Nahrungsmittelgeschäft{
+        + Bestellung annehmen()
+        + Nahrungsmittel verkaufen()
+    }
+    class Besitzer {
+
+    }
+    class Nahrungsmittel{
+        + Zur Neige gehen()
+    }
+    Kühlschrank "" --> "*" Reparaturdienst : Nachricht
+    Kühlschrank "" --> "*" Nahrungsmittelgeschäft : Nachricht
+    Hausroboter "" --> "*" Kühlschrank : Nachricht
