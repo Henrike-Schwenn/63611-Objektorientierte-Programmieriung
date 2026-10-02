@@ -22,7 +22,9 @@ public class HenrikeL1ST4 {
                 default -> System.out.println("Der ggT ist größer als 4.");
             }
         } catch (NumberFormatException e) {
-            System.out.println("Dies sind keine ganzen Zahlen");
+            System.out.println("Mindestens eine Ihrer Eingaben ist keine ganze Zahl. Bitte geben Sie zwei ganze Zahlen ein.");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Bitte geben Sie zwei ganze Zahlen ein.");
         }
     }
 }
