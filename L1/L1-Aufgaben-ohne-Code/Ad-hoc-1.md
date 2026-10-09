@@ -40,3 +40,5 @@ graph TD
 ### 1.4
 
 Abstrakte Klassen: Objekt, Lebewesen, Fortbewegungsmittel
+
+### 1.5
