@@ -1,6 +1,8 @@
 public class WunderTest {
     public static void main(String[] args) {
-        int n = Integer.parseInt(args[0]);
+        WunderTest.wunder(Integer.parseInt(args[0]));
+    }
+    public static void wunder(int n) {
         int i = 0;
         while (n != 1) {
             if (n%2==0) {

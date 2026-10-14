@@ -2,8 +2,8 @@ public class Zoo {
     public static void main (String[] args) {
         String tier = args[0];
         int beine = 0;
-        boolean flugfähig;
-        boolean hatfedern;
+        boolean flugfähig = false;
+        boolean hatfedern = false;
         String gefährlich = "eventuell";
         if (tier.equals("Kellerassel")){
             beine = 6;
