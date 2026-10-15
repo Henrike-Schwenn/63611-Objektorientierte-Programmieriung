@@ -1,6 +1,8 @@
 public class WunderTest {
     public static void main(String[] args) {
-        WunderTest.wunder(Integer.parseInt(args[0]));
+        for (int j=1; j<=100; j++) {
+            WunderTest.wunder(j);
+        }
     }
     public static int wunder(int n) {
         int i = 0;
@@ -12,7 +14,7 @@ public class WunderTest {
             }
             i++;
         }
-        System.out.print("Ziel erreicht in " + i + " Schritten.");
+        System.out.println("Ziel erreicht in " + i + " Schritten.");
         return i;
     }
 }
