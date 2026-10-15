@@ -1,8 +1,20 @@
 public class WunderTest {
     public static void main(String[] args) {
-        for (int j=1; j<=100; j++) {
-            WunderTest.wunder(j);
+        int [][] wunderschritte = new int [100] [2]; //Eingabe- und Rückgabewerte von wunder() von 1 bis 100 in Array
+        for (int j=0; j < wunderschritte.length; j++) {
+            wunderschritte[j][0]=j+1;
+            wunderschritte[j][1]=WunderTest.wunder(j+1);
         }
+        for (int k=0; k < wunderschritte.length-1; k++) {
+            for (int l=0; l < wunderschritte.length-1-k; l++) {
+                if (wunderschritte[l][1] < wunderschritte[l+1][1]) {
+                    int [] temp = wunderschritte[l];
+                    wunderschritte[l] = wunderschritte[l+1];
+                    wunderschritte[l+1] = temp;
+                }
+            }
+        }
+        System.out.println("Die Zahl " + wunderschritte[0][0] + " benötigt mit " + wunderschritte[0][1] + " Schritten die meisten Schritte.");
     }
     public static int wunder(int n) {
         int i = 0;
@@ -14,7 +26,6 @@ public class WunderTest {
             }
             i++;
         }
-        System.out.println("Ziel erreicht in " + i + " Schritten.");
         return i;
     }
 }
